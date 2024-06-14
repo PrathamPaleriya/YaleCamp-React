@@ -1,10 +1,10 @@
 
-
+<link rel="stylesheet" href="App.css" />
 function App() {
 
   return (
     <>
-      <h1>This is a test</h1>
+      <h1 className="bg-red-600 font-bold ">This is a test</h1>
     </>
   )
 }
