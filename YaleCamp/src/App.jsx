@@ -1,10 +1,11 @@
 
-<link rel="stylesheet" href="App.css" />
 function App() {
 
   return (
     <>
-      <h1 className="bg-red-600 font-bold ">This is a test</h1>
+      <div>
+        <p>This is a test</p>
+      </div>
     </>
   )
 }
