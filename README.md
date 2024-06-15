@@ -19,8 +19,9 @@ Welcome to **Yelpcamp** - the ultimate campground finding website! This project 
 
 ## 📸 Screenshots
 
-![Homepage Screenshot](path/to/homepage-screenshot.png)
-![Campground Detail Screenshot](path/to/campground-detail-screenshot.png)
+![Landing Page](./Assets/LandingPage.jpg)
+![Campground Detail Screenshot](./Assets/HomePage.jpg)
+![User Authentication Screenshot](./Assets/SignIn.jpg)
 
 
 ## 🛠️ Usage
