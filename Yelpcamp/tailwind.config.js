@@ -5,7 +5,26 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cream: {
+          DEFAULT: '#f9f6f1',
+          dark: '#726f6a'
+        },
+      },
+
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+      },
+
+      objectPosition: {
+        'center-10': 'center +72%',
+      },
+
+      minWidth: {
+        'sm': '640px',
+      },
+    },
   },
   plugins: [],
 }
