@@ -19,7 +19,7 @@ function Hero() {
                     <li className='flex gap-3 text-cream-dark text-lg my-2'> <img src={Checkpoint} alt="" />Leave reviews and experience.</li>
                     <li className='flex gap-3 text-cream-dark text-lg my-2'> <img src={Checkpoint} alt="" />See location for all camps.</li>
                 </ul>
-                <button className='bg-rose-500 font-semibold text-white px-7 py-4 rounded-md hover:bg-white hover:text-rose-500 hover:border-rose-500 hover:border-2 hover:shadow-md mt-5'><Link to="/home">View Campgrounds</Link></button>
+                <Link to="/home"><button className='bg-rose-500 font-semibold text-white px-7 py-4 rounded-md hover:bg-white hover:text-rose-500 hover:border-rose-500 hover:border-2 hover:shadow-md mt-5'>View Campgrounds</button></Link>
             </div>
 
             
@@ -37,7 +37,7 @@ function Hero() {
                     <li className='flex gap-3 text-cream-dark text-lg my-2'> <img src={Checkpoint} alt="" />Leave reviews and experience.</li>
                     <li className='flex gap-3 text-cream-dark text-lg my-2'> <img src={Checkpoint} alt="" />See location for all camps.</li>
                 </ul>
-                <button className='bg-rose-500 font-semibold text-white px-7 py-4 rounded-md hover:bg-white hover:text-rose-500 hover:border-rose-500 hover:border-2 hover:shadow-md mt-5'><Link to="/home">View Campgrounds</Link></button>
+                <Link to="/home" className='bg-rose-500 font-semibold text-white px-7 py-4 rounded-md hover:bg-white hover:text-rose-500 hover:border-rose-500 hover:border-2 hover:shadow-md mt-5'>View Campgrounds</Link>
         </div>
 
     </div>

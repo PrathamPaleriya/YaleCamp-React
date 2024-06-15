@@ -1,12 +1,14 @@
 import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom'
 import Hero from './components/Hero'
-import Header from './components/Header'
+import Layout from './components/Layout'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
     <Route path='' element={<Hero/>}/>
-    <Route path='home' element={<Header/>}/>
+    <Route path='home' element={<Layout/>}>
+    
+    </Route>
     </>
   )
 )
