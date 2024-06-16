@@ -2,6 +2,7 @@ import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} fr
 import Hero from './components/Hero'
 import Layout from './components/Layout'
 import Home from './components/Home'
+import { CampgroundProvider } from './contect/CampgroundContext'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,8 +19,8 @@ const router = createBrowserRouter(
 
 export default function App() {
   return (
-    <>
+    <CampgroundProvider>
       <RouterProvider router={router} />
-    </>
+    </CampgroundProvider>
   )
 }
