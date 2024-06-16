@@ -39,13 +39,13 @@ function Header() {
       <div id='navBar' className='flex absolute lg:static bg-white lg:bg-inherit justify-center items-center  m-auto font-semibold  lg:min-h-fit min-h-[55vh] left-0 top-[-100%] w-full lg:w-[50%] '>
         <ul className='flex lg:flex-row flex-col items-end lg:justify-center w-full mx-14 gap-5 me-11 h-10'>
           <li>
-            <NavLink to="" className={({isActive}) => ` underline-offset-4 decoration-rose-600 ${isActive ? "text-rose-600" : "text-cream-dark hover:underline"}`}>Home</NavLink>
+            <NavLink to="" className={({isActive}) => ` underline-offset-4 decoration-rose-600 hover:underline `}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/campgrounds" className={({isActive}) => ` underline-offset-4 decoration-rose-600 ${isActive ? "text-rose-600" : "text-cream-dark hover:underline"}`}>Campgrounds</NavLink>
+            <NavLink to="campgrounds" className={({isActive}) => ` underline-offset-4 decoration-rose-600 ${isActive ? "text-rose-600" : "text-cream-dark hover:underline"}`}>Campgrounds</NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={({isActive}) => `underline-offset-4 decoration-rose-600 ${isActive ? "text-rose-500" : "text-cream-dark hover:underline"}`}>About</NavLink>
+            <NavLink to="about" className={({isActive}) => `underline-offset-4 decoration-rose-600 ${isActive ? "text-rose-500" : "text-cream-dark hover:underline"}`}>About</NavLink>
           </li>
         </ul>
       </div>
