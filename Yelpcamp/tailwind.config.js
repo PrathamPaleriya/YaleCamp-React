@@ -9,12 +9,12 @@ export default {
       colors: {
         cream: {
           DEFAULT: '#f9f6f1',
-          dark: '#726f6a'
+          dark: '#726f6a',
         },
       },
 
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
+        'archivo': ['Archivo', 'sans-serif'],
       },
 
       objectPosition: {

@@ -27,12 +27,12 @@ function Header() {
 
   return (
     <>
-    <div className='flex px-8 py-6 lg:px-28 lg:py-6 items-center justify-between w-full'>
+    <div className='flex px-8 py-6 lg:px-28 items-center justify-between w-full md:mb-3'>
       <Link to={"/home"}><img src={Logo} alt="Logo" /></Link>
 
       <div className='order-2 flex items-center'>
         <Link rel="Login" to="/login" className='text-cream-dark font-semibold lg:mx-2 mx-4  hover:text-rose-600 hover:shadow-sm '>Login</Link>
-        <Link rel='Singin' to="/signin" className='hidden lg:inline-flex bg-black font-semibold text-white px-5 py-3 rounded-md hover:bg-white hover:text-cream-dark border-black border-2 hover:border-cream-dark hover:border-2 mx-2'>Create an account</Link>
+        <Link rel='Singin' to="/signin" className='hidden lg:inline-flex bg-black font-semibold text-white px-5 py-2  rounded-md hover:bg-white hover:text-cream-dark border-black border-2 hover:border-cream-dark hover:border-2 mx-2'>Create an account</Link>
         <button className='cursor-pointer  flex justify-center min-w-6 lg:hidden z-10 lg:z-0' onClick={showNavigation}><img src={icon} alt="hamburger icon" /></button>
       </div>
 
