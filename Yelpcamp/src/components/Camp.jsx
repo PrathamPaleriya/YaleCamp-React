@@ -13,7 +13,7 @@ function camp() {
 
   return (
     <div className='grid grid-cols-3 px-8 lg:px-20 my-10 gap-10'>
-      <div className='border-2 border-cream-outline rounded-md w-full p-10 max-h-[650px]'>
+      <div className='border-2 border-cream-outline rounded-md w-full p-10 max-h-[650px] hover:border-cream-dark hover:border-2'>
         <Map location={camp.location} id={camp.key} title={camp.title}/>
 
       </div>

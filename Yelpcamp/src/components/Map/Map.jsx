@@ -8,7 +8,7 @@ import { CampgroundContext } from '../../contect/CampgroundContext';
 
 const Map = ({id, location, title}) => {
 
-  const center = [51.505, -0.09]; // London coordinates
+  const center = [location.lat, location.lng]; 
   const zoom = 13;
 
   return (
@@ -17,7 +17,7 @@ const Map = ({id, location, title}) => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker key={id} position={[location.lat, location.lng]}>
+      <Marker key={id} position={center}>
         <Popup>
          {title}
         </Popup>

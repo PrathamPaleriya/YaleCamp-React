@@ -12,7 +12,7 @@ const initialCampgrounds = [
       rate: "104.99",
       key: '1',
       detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores dolore eius repellat libero? Rerum tenetur numquam doloribus ipsum reiciendis saepe consequuntur officia perferendis ratione iusto at neque, incidunt nobis temporibus animi, molestias nihil?",
-      location: { lat: 51.505, lng: -0.09 },
+      location: { lat: 16.3498, lng: 120.6919 },
     },
     {
       title: 'Calanguas Island',
@@ -22,7 +22,7 @@ const initialCampgrounds = [
       rate: "104.99",
       key: '2',
       detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores dolore eius repellat libero? Rerum tenetur numquam doloribus ipsum reiciendis saepe consequuntur officia perferendis ratione iusto at neque, incidunt nobis temporibus animi, molestias nihil?",
-      location: { lat: 51.505, lng: -0.09 },
+      location: { lat: 14.2971, lng: 122.9288 },
     },
     {
       title: 'Latik Riverside',
@@ -32,7 +32,7 @@ const initialCampgrounds = [
       image: LRL,
       key: '3',
       detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores dolore eius repellat libero? Rerum tenetur numquam doloribus ipsum reiciendis saepe consequuntur officia perferendis ratione iusto at neque, incidunt nobis temporibus animi, molestias nihil?",
-      location: { lat: 51.505, lng: -0.09 },
+      location: { lat: 12.0797, lng: 121.5058 },
     },
     {
       title: 'Onay Beach',
@@ -42,7 +42,7 @@ const initialCampgrounds = [
       image: MUL,
       key: '4',
       detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores dolore eius repellat libero? Rerum tenetur numquam doloribus ipsum reiciendis saepe consequuntur officia perferendis ratione iusto at neque, incidunt nobis temporibus animi, molestias nihil?",
-      location: { lat: 51.505, lng: -0.09 },
+      location: { lat: 10.5152, lng: 119.9655 },
     },
     {
       title: 'Seven Sisters Waterfall',
@@ -52,7 +52,7 @@ const initialCampgrounds = [
       image: SSWL,
       key: '5',
       detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores dolore eius repellat libero? Rerum tenetur numquam doloribus ipsum reiciendis saepe consequuntur officia perferendis ratione iusto at neque, incidunt nobis temporibus animi, molestias nihil?",
-      location: { lat: 51.505, lng: -0.09 },
+      location: { lat: 4.7047, lng: 9.4194 },
     },
     {
       title: 'Buloy Springs',
@@ -62,7 +62,7 @@ const initialCampgrounds = [
       image: BSL,
       key: '6',
       detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis maiores dolore eius repellat libero? Rerum tenetur numquam doloribus ipsum reiciendis saepe consequuntur officia perferendis ratione iusto at neque, incidunt nobis temporibus animi, molestias nihil?",
-      location: { lat: 51.505, lng: -0.09 },
+      location: { lat: 10.2047, lng: 119.3567 },
     },
   ];
 
