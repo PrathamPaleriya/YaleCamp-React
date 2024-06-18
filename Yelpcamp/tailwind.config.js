@@ -10,6 +10,7 @@ export default {
         cream: {
           DEFAULT: '#f9f6f1',
           dark: '#726f6a',
+          outline: "#e8e8e8"
         },
       },
 

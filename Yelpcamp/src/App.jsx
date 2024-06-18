@@ -5,6 +5,7 @@ import Home from './components/Home'
 import { CampgroundProvider } from './contect/CampgroundContext'
 import Campgrounds from './components/Campgrounds'
 import About from './components/About'
+import Camp from './components/Camp'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>}/>
       <Route path='campgrounds' element={<Campgrounds/>} />
       <Route path='about' element={<About/>} />
+      <Route path='camp/:id' element={<Camp/>}/>
     
     </Route>
     </>
