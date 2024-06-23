@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { databases } from '../appwrite/config';
 
 export default function useFetchData(databaseId, collectionId) {
@@ -6,26 +6,21 @@ export default function useFetchData(databaseId, collectionId) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        const fetchCampgrounds = async () => {
-            try {
-                const response = await databases.listDocuments(
-                  databaseId, collectionId
-                );
-                setData(response.documents);
-                setLoading(false);
-            } catch (err) {
-                setError(err);
-            } finally {
-              setLoading(false);
-            }
-                
-            }
-        
-
-        fetchCampgrounds();
-
+    const fetchData = useCallback(async () => {
+        try {
+            const response = await databases.listDocuments(databaseId, collectionId);
+            setData(response.documents);
+        } catch (err) {
+            setError(err);
+        } finally {
+            setLoading(false);
+        }
     }, [databaseId, collectionId]);
+
+    useEffect(() => {
+        setLoading(true);
+        fetchData();
+    }, [fetchData]);
 
     return { data, loading, error };
 }
