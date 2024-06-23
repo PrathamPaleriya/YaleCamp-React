@@ -1,20 +1,52 @@
-import React, { useContext } from 'react'
-import CampCard from './CampCard'
-import { CampgroundContext } from '../contect/CampgroundContext'
+import React, { useState, useEffect, useCallback } from "react";
+import CampCard from "./CampCard";
+import { databases } from "../appwrite/config";
+import useFetchData from "../Hooks/useFetchData";
+
 
 function HeroCampDisplay() {
+  // const [campgrounds, setCampgrounds] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState(null);
 
-    // const {campground} = useContext(campgroundContext)
-    const {campground} = useContext(CampgroundContext)
-    
+  // const fetchCampground = useCallback(async () => {
+  //   try {
+  //     const response = await databases.listDocuments(
+  //       import.meta.env.VITE_DATABASE_ID,
+  //       import.meta.env.VITE_COLLECTION_CAMPS_ID
+  //     );
+  //     setCampgrounds(response.documents);
+  //   } catch (err) {
+  //     setError("Failed to fetch campgrounds");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // },[]);
+
+  // useEffect(() => {
+  //   fetchCampground();
+  // }, [fetchCampground]);
+
+
+  const {data, loading, error} = useFetchData(import.meta.env.VITE_DATABASE_ID,
+    import.meta.env.VITE_COLLECTION_CAMPS_ID)
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
 
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-6 min-w-72'>
-      {campground.map(item => (
-        <CampCard key={item.key} id={item.key} title={item.title} description={item.description} coverImage={item.coverImage} />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-6 min-w-72">
+      {data.map((item) => (
+        <CampCard
+          key={item.$id}
+          id={item.$id}
+          title={item.Title}
+          caption={item.caption}
+          imageID={item.images[0]}
+        />
       ))}
     </div>
-  )
+  );
 }
 
-export default HeroCampDisplay
+export default HeroCampDisplay;

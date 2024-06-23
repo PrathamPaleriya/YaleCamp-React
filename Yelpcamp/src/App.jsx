@@ -6,6 +6,7 @@ import { CampgroundProvider } from './contect/CampgroundContext'
 import Campgrounds from './components/Campgrounds'
 import About from './components/About'
 import Camp from './components/Camp'
+import Test from './components/Test/Test'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,14 +17,15 @@ const router = createBrowserRouter(
       <Route path='campgrounds' element={<Campgrounds/>} />
       <Route path='about' element={<About/>} />
       <Route path='camp/:id' element={<Camp/>}/>
-    
     </Route>
+    <Route path='test' element={<Test/>} />
     </>
   )
 )
 
 
 export default function App() {
+
   return (
     <CampgroundProvider>
       <RouterProvider router={router} />
