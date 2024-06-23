@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import CampCard from "./CampCard";
 import { databases } from "../appwrite/config";
 import useFetchData from "../Hooks/useFetchData";
+import { Query } from "appwrite";
 
 
 function HeroCampDisplay() {
@@ -29,7 +30,9 @@ function HeroCampDisplay() {
 
 
   const {data, loading, error} = useFetchData(import.meta.env.VITE_DATABASE_ID,
-    import.meta.env.VITE_COLLECTION_CAMPS_ID)
+    import.meta.env.VITE_COLLECTION_CAMPS_ID, [
+      Query.select(["$id", "Title", "caption", "images"])	
+    ])
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;

@@ -7,6 +7,7 @@ import Campgrounds from './components/Campgrounds'
 import About from './components/About'
 import Camp from './components/Camp'
 import Test from './components/Test/Test'
+import Signin from './components/authentication/Signin'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path='camp/:id' element={<Camp/>}/>
     </Route>
     <Route path='test' element={<Test/>} />
+    <Route path='create-account' element={<Signin/>} />
     </>
   )
 )
