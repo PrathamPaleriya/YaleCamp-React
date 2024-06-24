@@ -3,7 +3,7 @@ import CampCard from "./CampCard";
 import { databases } from "../appwrite/config";
 import useFetchData from "../Hooks/useFetchData";
 import { Query } from "appwrite";
-
+import { BeatLoader} from "react-spinners";
 
 function HeroCampDisplay() {
   // const [campgrounds, setCampgrounds] = useState([]);
@@ -34,7 +34,7 @@ function HeroCampDisplay() {
       Query.select(["$id", "Title", "caption", "images"])	
     ])
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center my-4"><BeatLoader color={'#000'} loading={loading} size={30} /></div>;
   if (error) return <div>{error}</div>;
 
   return (

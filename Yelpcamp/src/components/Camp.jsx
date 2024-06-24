@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Map from './Map/Map';
 import { storage } from '../appwrite/config';
 import useFetchCamp from '../Hooks/useFetchCamp';
+import { BeatLoader } from 'react-spinners';
 
 function camp() {
 
@@ -28,7 +29,7 @@ function camp() {
   }
 
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="flex justify-center items-center my-4"><BeatLoader color={'#000'} loading={loading} size={30} /></div>;
   if (error) return <div>{error}</div>;
    
    fetchImage(data.images[0])
