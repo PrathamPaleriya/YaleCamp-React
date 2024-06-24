@@ -39,7 +39,7 @@ function Test() {
 
     // const [activate, setActivate] = useState(false)
 
-    }
+    
 
     // authServices.login({email: "test@test.com", password: "12345678"})
 
@@ -51,7 +51,7 @@ function Test() {
     </>
 
   )
-
+}
 
 
 
