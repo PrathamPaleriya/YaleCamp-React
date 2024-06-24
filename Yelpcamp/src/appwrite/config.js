@@ -1,4 +1,4 @@
-import { Client, Databases, ImageGravity, Storage,} from 'appwrite';
+import { Account, Client, Databases, ImageGravity, Storage,} from 'appwrite';
 
 const client = new Client();
 
@@ -9,6 +9,8 @@ client
 const databases = new Databases(client)
 
 const storage = new Storage(client)
+
+const account = new Account(client)
 
 // const result = await databases.getDocument(
 //     import.meta.env.VITE_DATABASE_ID,
@@ -28,4 +30,4 @@ const storage = new Storage(client)
 
 
 
-export {client, databases, storage};
+export {client, databases, storage, account};

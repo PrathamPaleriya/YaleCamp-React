@@ -5,8 +5,10 @@
 // import { ImageGravity, ImageFormat } from "appwrite";
 // import {result2} from '../../appwrite/config'
 
-import useFetchData from "../../Hooks/useFetchData"
-import useFetchCamp from "../../Hooks/useFetchCamp"
+import { useState, useEffect } from "react"
+import authServices from "../../appwrite/authServices"
+import { account } from "../../appwrite/config"
+
 
 
 
@@ -33,6 +35,14 @@ function Test() {
 
     // console.log(data)
 
+    // authServices.createAccount({email: "test@test.com", password:"12345678", name:'test'})
+
+    // const [activate, setActivate] = useState(false)
+
+    }
+
+    // authServices.login({email: "test@test.com", password: "12345678"})
+
 
   return (
     <>
@@ -41,7 +51,7 @@ function Test() {
     </>
 
   )
-}
+
 
 
 
