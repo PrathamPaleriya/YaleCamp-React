@@ -5,9 +5,10 @@
 // import { ImageGravity, ImageFormat } from "appwrite";
 // import {result2} from '../../appwrite/config'
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import authServices from "../../appwrite/authServices"
 import { account } from "../../appwrite/config"
+import { CampgroundContext } from "../../contect/CampgroundContext"
 
 
 
@@ -44,9 +45,14 @@ function Test() {
     // authServices.login({email: "test@test.com", password: "12345678"})
 
 
+
+
+
   return (
     <>
+
     <h1>test</h1>
+    {/* <button onClick={handler}>test here</button> */}
 
     </>
 

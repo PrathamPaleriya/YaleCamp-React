@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import authServices from "../../appwrite/authServices";
 import { BarLoader } from "react-spinners"; // Import the spinner component
 
-function Signin() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [alert, setAlert] = useState("");
@@ -29,7 +29,6 @@ function Signin() {
     const userName = email.split("@")[0];
 
     try {
-      await authServices.createAccount({ email, password, name: userName });
       await authServices.login({ email, password });
       navigate("/home");
     } catch (error) {
@@ -50,7 +49,7 @@ function Signin() {
         </div>
         <div className="h-full flex my-10 lg:my-0 flex-col w-full md:w-[70%] lg:w-full justify-center">
           <h1 className="font-bold text-3xl md:text-4xl my-6 w-64 md:w-full">
-            Start Exploring camps from all <br className="hidden lg:block" />
+            Start Exploring camps from all <br className="hidden md:block" />
             around the world.
           </h1>
 
@@ -88,7 +87,7 @@ function Signin() {
               }`}
               disabled={loading}
             >
-              {loading ? "Creating account..." : "Create an account"}
+              {loading ? "Login in..." : "Log in"}
             </button>
           </form>
           {loading && (
@@ -97,12 +96,12 @@ function Signin() {
             </div>
           )}
           <p className="text-lg">
-            Already a user?{" "}
+            Not a user yet?{" "}
             <Link
-              to="/login"
+              to="/create-account"
               className="underline text-blue-600 hover:text-blue-400"
             >
-              Login
+              Create an account
             </Link>
           </p>
         </div>
@@ -124,4 +123,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Login;
