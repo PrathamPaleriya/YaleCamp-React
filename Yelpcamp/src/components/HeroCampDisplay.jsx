@@ -3,7 +3,7 @@ import CampCard from "./CampCard";
 import { databases } from "../appwrite/config";
 import useFetchData from "../Hooks/useFetchData";
 import { Query } from "appwrite";
-import { BeatLoader} from "react-spinners";
+import { BeatLoader } from "react-spinners";
 
 function HeroCampDisplay() {
   // const [campgrounds, setCampgrounds] = useState([]);
@@ -28,13 +28,18 @@ function HeroCampDisplay() {
   //   fetchCampground();
   // }, [fetchCampground]);
 
+  const { data, loading, error } = useFetchData(
+    import.meta.env.VITE_DATABASE_ID,
+    import.meta.env.VITE_COLLECTION_CAMPS_ID,
+    [Query.select(["$id", "Title", "caption", "images"])]
+  );
 
-  const {data, loading, error} = useFetchData(import.meta.env.VITE_DATABASE_ID,
-    import.meta.env.VITE_COLLECTION_CAMPS_ID, [
-      Query.select(["$id", "Title", "caption", "images"])	
-    ])
-
-  if (loading) return <div className="flex justify-center items-center my-4"><BeatLoader color={'#000'} loading={loading} size={30} /></div>;
+  if (loading)
+    return (
+      <div className="flex justify-center items-center my-4">
+        <BeatLoader color={"#000"} loading={loading} size={30} speedMultiplier={2} />
+      </div>
+    );
   if (error) return <div>{error}</div>;
 
   return (

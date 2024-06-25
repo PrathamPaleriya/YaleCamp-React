@@ -3,6 +3,7 @@ import Logo from "../../assets/Logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import authServices from "../../appwrite/authServices";
 import { BarLoader } from "react-spinners"; // Import the spinner component
+import AutoHideAlert from "../Popup/AutoHideAlert";
 
 function Signin() {
   const [email, setEmail] = useState("");
@@ -22,6 +23,7 @@ function Signin() {
     }
   };
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -33,11 +35,12 @@ function Signin() {
       await authServices.login({ email, password });
       navigate("/home");
     } catch (error) {
-      setAlert(error);
+      setAlert(error.message);
       console.log(error);
       setLoading(false);
     }
   };
+
 
   return (
     <div className="lg:flex lg:min-h-screen h-screen">
@@ -51,7 +54,7 @@ function Signin() {
         <div className="h-full flex my-10 lg:my-0 flex-col w-full md:w-[70%] lg:w-full justify-center">
           <h1 className="font-bold text-3xl md:text-4xl my-6 w-64 md:w-full">
             Start Exploring camps from all <br className="hidden lg:block" />
-            around the world.
+            around the world.)
           </h1>
 
           <form onSubmit={handleSubmit}>
@@ -84,18 +87,20 @@ function Signin() {
             <button
               type="submit"
               className={`text-white py-4 px-4 w-full my-3 ${
-                loading ? "bg-blue-400" : "bg-black"
+                alert ? "bg-red-400" : "bg-black"
               }`}
               disabled={loading}
             >
-              {loading ? "Creating account..." : "Create an account"}
+              {loading ? (<div className="flex justify-center items-center h-full py-2">
+              <BarLoader color={"#fff"} loading={loading} width={100} speedMultiplier={3} />
+            </div>) : (alert ? ("Try again") : ("Create an account"))}
             </button>
           </form>
-          {loading && (
+          {/* {loading && (
             <div className="flex justify-center items-center">
               <BarLoader color={"#000"} loading={loading} width={100} speedMultiplier={3} />
             </div>
-          )}
+          )} */}
           <p className="text-lg">
             Already a user?{" "}
             <Link

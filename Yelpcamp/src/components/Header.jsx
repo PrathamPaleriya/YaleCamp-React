@@ -76,7 +76,7 @@ function Header() {
               </button>
               {showDropdown && (
                 <div
-                  className="absolute z-10 mt-2 py-2 w-48 bg-white rounded-md shadow-lg"
+                  className="absolute z-10 mt-2 py-2 w-32 bg-white rounded-md shadow-lg"
                   onMouseLeave={toggleDropdown}
                 >
                   <Link

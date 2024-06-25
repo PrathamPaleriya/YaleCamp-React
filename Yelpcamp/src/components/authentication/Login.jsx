@@ -26,13 +26,11 @@ function Login() {
     e.preventDefault();
     setLoading(true);
 
-    const userName = email.split("@")[0];
-
     try {
       await authServices.login({ email, password });
       navigate("/home");
     } catch (error) {
-      setAlert(error);
+      setAlert(error.message);
       console.log(error);
       setLoading(false);
     }
@@ -83,18 +81,20 @@ function Login() {
             <button
               type="submit"
               className={`text-white py-4 px-4 w-full my-3 ${
-                loading ? "bg-blue-400" : "bg-black"
+                alert ? "bg-red-400" : "bg-black"
               }`}
               disabled={loading}
             >
-              {loading ? "Login in..." : "Log in"}
+              {loading ? (<div className="flex justify-center items-center h-full py-2">
+              <BarLoader color={"#fff"} loading={loading} width={100} speedMultiplier={3} />
+            </div>) : (alert ? ("Try again") : ("login"))}
             </button>
           </form>
-          {loading && (
+          {/* {loading && (
             <div className="flex justify-center items-center">
               <BarLoader color={"#000"} loading={loading} width={100} speedMultiplier={3} />
             </div>
-          )}
+          )} */}
           <p className="text-lg">
             Not a user yet?{" "}
             <Link
