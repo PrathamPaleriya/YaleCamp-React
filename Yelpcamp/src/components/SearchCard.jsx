@@ -18,7 +18,7 @@ function SearchCard() {
               <Searchbox placeholder="Search for camps" onSearch={handleSearch}/>
             </div>
             
-            <Link className='text-cream-dark underline text-lg hover:text-rose-700'>Or add your own campgorund</Link>
+            <Link to='/create-campground' className='text-cream-dark underline text-lg hover:text-rose-700'>Or add your own campgorund</Link>
         </div>
     </div>
   )
