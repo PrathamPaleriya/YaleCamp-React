@@ -72,6 +72,7 @@ function AddCampground() {
               />
             </div>
 
+            <h4 className="text-cream-dark mb-2">Camp Images</h4>
             <div
               className="bg-cream-box border-2 border-dashed border-gray-400 p-8 text-center cursor-pointer text-cream-dark"
             >
