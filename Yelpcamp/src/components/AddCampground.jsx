@@ -299,7 +299,7 @@ function AddCampground() {
                 Add another Campground
               </button>
             ) : (
-<button
+        <button
             type="submit"
             className={`text-white py-4 px-4 w-full my-3 ${
               alert ? "bg-red-400" : "bg-black"

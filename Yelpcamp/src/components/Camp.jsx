@@ -4,6 +4,7 @@ import Map from "./Map/Map";
 import { storage } from "../appwrite/config";
 import useFetchCamp from "../Hooks/useFetchCamp";
 import { BeatLoader } from "react-spinners";
+import ReviewCard from "./ReviewCard";
 
 function camp() {
   const { id } = useParams();
@@ -22,7 +23,6 @@ function camp() {
     );
 
     setImageURL(respone.href);
-    console.log("fetch");
   };
 
   if (loading)
@@ -46,8 +46,8 @@ function camp() {
         <Map location={data.location} id={camp.$id} title={camp.title} />
       </div>
 
-      <div className="border-2 border-cream-outline rounded-md w-full p-10 lg:col-span-2 lg:order-2">
-        <div>
+      <div className="w-full lg:col-span-2 lg:order-2">
+        <div className="border-2 border-cream-outline rounded-md p-10  mb-10">
           <img
             src={imageURL}
             alt=""
@@ -62,6 +62,13 @@ function camp() {
           <p className="md:text-lg lg:text-xl text-cream-dark">
             {data.description}
           </p>
+          <p className="md:text-lg lg:text-xl mt-8 italic text-cream-dark">
+            Submitted by {data.author}
+          </p>
+        </div>
+
+        <div className="border-2 border-cream-outline rounded-md p-10 my-10">
+          <ReviewCard campID={id} reviews={data.reviews}/>
         </div>
       </div>
     </div>
