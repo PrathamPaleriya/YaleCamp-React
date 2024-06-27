@@ -4,6 +4,7 @@ import { CampgroundContext } from "../contect/CampgroundContext";
 import { storage, databases } from "../appwrite/config";
 import { ID, Permission, Role } from "appwrite";
 import { BarLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 function AddCampground() {
   const { user } = useContext(CampgroundContext);
@@ -18,7 +19,7 @@ function AddCampground() {
   const [location, setLocation] = useState([]);
   const [lng, setLng] = useState(0);
   const [lat, setLat] = useState(0);
-  const [toreset, setToReset] = useState(true)
+  const [toreset, setToReset] = useState(false)
 
   const handleChange = (e) => {
     switch (e.target.name) {
@@ -132,9 +133,11 @@ function AddCampground() {
   }
 
   return (
-    <div className="flex justify-center my-5 p-5">
-      <div className="w-[65%]">
-        <h1 className="text-3xl font-bold mb-8">Add New Campground</h1>
+    <>
+    <div className="flex justify-center my-5 px-5 md:px-10 py-5">
+      
+      <div className="w-full md:w-[65%]">
+        <h1 className="text-3xl font-bold mb-8">Add New <br className="md:hidden"/>Campground</h1>
 
         <form onSubmit={handleSubmit}>
           <div>
@@ -328,6 +331,7 @@ function AddCampground() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

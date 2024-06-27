@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import React from "react";
 import Logo from "../assets/Logo.svg";
 import { Link, NavLink } from "react-router-dom";
-import close from "../assets/Close.svg";
+import Close from "../assets/Close.svg";
 import Hamburger from "../assets/Hamburger.svg";
 import { CampgroundContext } from "../contect/CampgroundContext";
 import authServices from "../appwrite/authServices";
@@ -13,14 +13,16 @@ function Header() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [alert, setAlert] = useState();
   const [loading, setLoading] = useState(false);
+  const [show, setShow] = useState(false)
 
   const navLinks = document.querySelector("#navBar");
   const showNavigation = () => {
-    console.log("Shownavigation");
-    if (icon === Hamburger) {
-      setIcon(close);
-    } else {
+    if (show) {
       setIcon(Hamburger);
+      setShow(false);
+    } else {
+      setIcon(Close);
+      setShow(true)
     }
 
     navLinks.classList.toggle("top-[-15%]");

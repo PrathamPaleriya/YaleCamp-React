@@ -44,8 +44,8 @@ function AddReview() {
   };
 
   return (
-    <div className="flex justify-center items-center my-5 p-5">
-      <div className="w-[65%]">
+    <div className="flex justify-center items-center my-5 p-7">
+      <div className="md:w-[65%] w-full">
         <h1 className="font-bold text-3xl mb-5">Add New Comment</h1>
         <form onSubmit={handleOnSubmit}>
           <h3 className="text-cream-dark mb-2">Review</h3>
