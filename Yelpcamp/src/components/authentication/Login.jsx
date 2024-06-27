@@ -95,6 +95,11 @@ function Login() {
               <BarLoader color={"#000"} loading={loading} width={100} speedMultiplier={3} />
             </div>
           )} */}
+          {alert && (
+            <div className="text-red-500 my-3">
+              <p>{alert}</p>
+            </div>
+          )}
           <p className="text-lg">
             Not a user yet?{" "}
             <Link

@@ -3,7 +3,6 @@ import Logo from "../../assets/Logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import authServices from "../../appwrite/authServices";
 import { BarLoader } from "react-spinners"; // Import the spinner component
-import AutoHideAlert from "../Popup/AutoHideAlert";
 
 function Signin() {
   const [email, setEmail] = useState("");
@@ -23,7 +22,6 @@ function Signin() {
     }
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -40,7 +38,6 @@ function Signin() {
       setLoading(false);
     }
   };
-
 
   return (
     <div className="lg:flex lg:min-h-screen h-screen">
@@ -91,9 +88,20 @@ function Signin() {
               }`}
               disabled={loading}
             >
-              {loading ? (<div className="flex justify-center items-center h-full py-2">
-              <BarLoader color={"#fff"} loading={loading} width={100} speedMultiplier={3} />
-            </div>) : (alert ? ("Try again") : ("Create an account"))}
+              {loading ? (
+                <div className="flex justify-center items-center h-full py-2">
+                  <BarLoader
+                    color={"#fff"}
+                    loading={loading}
+                    width={100}
+                    speedMultiplier={3}
+                  />
+                </div>
+              ) : alert ? (
+                "Try again"
+              ) : (
+                "Create an account"
+              )}
             </button>
           </form>
           {/* {loading && (
@@ -101,6 +109,12 @@ function Signin() {
               <BarLoader color={"#000"} loading={loading} width={100} speedMultiplier={3} />
             </div>
           )} */}
+
+          {alert && (
+            <div className="text-red-500 my-3">
+              <p>{alert}</p>
+            </div>
+          )}
           <p className="text-lg">
             Already a user?{" "}
             <Link
