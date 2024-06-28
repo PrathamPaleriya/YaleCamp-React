@@ -56,7 +56,7 @@ function Signin() {
 
           <h1 className="font-bold text-2xl md:text-4xl my-6 w-64 md:w-full">
             Start Exploring camps from all <br className="hidden lg:block" />
-            around the world.)
+            around the world.
           </h1>
 
           <form onSubmit={handleSubmit}>
