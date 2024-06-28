@@ -37,8 +37,8 @@ function Login() {
   };
 
   return (
-    <div className="lg:flex lg:min-h-screen h-screen">
-      <div className="min-w-[60%] lg:h-screen h-[70%] flex flex-col justify-center items-center px-8 py-10 lg:px-28 lg:py-10 relative">
+    <div className="lg:flex lg:min-h-screen ">
+      <div className="min-w-[60%] lg:h-screen h-full flex flex-col justify-center items-center px-8 py-10 lg:px-28 lg:py-10 relative">
         <div className="hidden md:flex justify-between w-full relative md:absolute top-4 md:left-0 px-8 lg:px-28">
           <div>
             <img src={Logo} alt="Logo" />
@@ -119,7 +119,7 @@ function Login() {
         </div>
       </div>
 
-      <div className="bg-cream w-full flex justify-center items-center p-8 lg:h-screen h-[30%]">
+      <div className="bg-cream w-full flex justify-center items-center p-8 lg:h-screen h-full">
         <div className="lg:w-[80%]">
           <p className="text-xl lg:text-3xl font-bold">
             “ There is a kind of magicness about going far away and then coming
