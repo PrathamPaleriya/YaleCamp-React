@@ -15,8 +15,9 @@ function Header() {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false)
 
-  const navLinks = document.querySelector("#navBar");
+  
   const showNavigation = () => {
+    const navLinks = document.querySelector("#navBar");
     if (show) {
       setIcon(Hamburger);
       setShow(false);
