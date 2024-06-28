@@ -17,6 +17,7 @@ import Login from "./components/authentication/Login";
 import PrivateRoute from "./components/Layouts/PrivateRoute";
 import AddCampground from "./components/AddCampground";
 import AddReview from "./components/AddReview";
+import NotFound from "./components/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
         <Route path="create-campground" element={<AddCampground/>} />
         <Route path="add-review/:id" element={<AddReview/>} />
       </Route>
+      <Route path="*" element={<NotFound/>}/>
     </>
   )
 );

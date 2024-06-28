@@ -16,9 +16,9 @@ function AddCampground() {
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState(null);
-  const [location, setLocation] = useState([]);
   const [lng, setLng] = useState(0);
   const [lat, setLat] = useState(0);
+  const location = [lat, lng];
   const [toreset, setToReset] = useState(false)
 
   const handleChange = (e) => {
@@ -75,7 +75,6 @@ function AddCampground() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fileIds = [];
-    setLocation([parseFloat(lng), parseFloat(lat)]);
     setLoading(true);
 
       try {
@@ -161,7 +160,8 @@ function AddCampground() {
                 name="price"
                 value={price}
                 min={0}
-                max={999.9}
+                step={0.01}
+                max={99999.9}
                 onChange={handleChange}
                 className="w-full bg-cream-box px-5 py-3"
                 required
@@ -175,6 +175,7 @@ function AddCampground() {
                   type="number"
                   name="lng"
                   value={lng}
+                  step={0.00001}
                   min={-180}
                   max={180}
                   onChange={handleChange}
@@ -189,6 +190,7 @@ function AddCampground() {
                   type="number"
                   name="lat"
                   value={lat}
+                  step={0.0001}
                   min={-90}
                   max={90}
                   onChange={handleChange}
@@ -265,36 +267,6 @@ function AddCampground() {
             </div>
           )}
 
-          {/* <button
-            type="submit"
-            className={`text-white py-4 px-4 w-full my-3 ${
-              alert ? "bg-red-400" : "bg-black"
-            }`}
-            disabled={loading}
-          >
-            {loading ? (
-              <div className="flex justify-center items-center h-full py-2">
-                <BarLoader
-                  color={"#fff"}
-                  loading={loading}
-                  width={100}
-                  speedMultiplier={3}
-                />
-              </div>
-            ) : alert ? (
-              "Try again"
-            ) : (
-              "Add Campground"
-            )}
-          </button>
-
-          {
-            toreset && (
-              <button type="button" onClick={handleReset} className="text-white py-4 px-4 w-full my-3 bg-blue-500">
-                Add another Campground
-              </button>
-            )
-          } */}
 
           {
             toreset ? (
