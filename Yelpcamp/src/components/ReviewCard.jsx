@@ -10,7 +10,7 @@ function ReviewCard({campID, reviews}) {
     <>
         {reviews.map((item) => (
             <div key={item.$id} className='border-b-2 border-cream-outline p-4 w-full'>
-                <div className='flex items-center justify-between'>
+                <div className='md:flex items-center justify-between'>
                     <h1 className='font-semibold text-lg md:text-xl'>{item.author}</h1>
                     <p className='font-semibold text-sm md:text-lg text-cream-dark'>{new Date(item.$createdAt).toLocaleDateString()}</p>
                 </div>

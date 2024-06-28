@@ -53,11 +53,11 @@ function camp() {
             alt=""
             className="object-cover object-center w-full lg:h-[550px]"
           />
-          <div className="flex justify-between items-center">
-            <h1 className="my-5 text-md md:text-xl lg:text:2xl font-bold">
+          <div className="md:flex justify-between items-center">
+            <h1 className="mt-5 md:my-5 text-md md:text-xl lg:text:2xl font-bold">
               {data.Title}
             </h1>
-            <p className="text-sm md:text-lg lg:text-xl">{`INR: ${data.rate}/night`}</p>
+            <p className="my-3 md:my-0  text-sm md:text-lg lg:text-xl">{`INR: ${data.rate}/night`}</p>
           </div>
           <p className="md:text-lg lg:text-xl text-cream-dark">
             {data.description}

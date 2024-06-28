@@ -56,7 +56,7 @@ const About = () => {
             <img src={data.avatar_url} className="rounded-full" alt="Avatar" />
           </div>
           <div>
-            <h1 className="text-3xl font-bold mb-2">About YelpCamp</h1>
+            <h1 className="text-3xl font-bold mb-5">About YelpCamp</h1>
             <p className="text-gray-700 mb-4">
               Welcome to YelpCamp, your go-to website for finding the best campgrounds. <br />
               This project is a portfolio piece, showcasing the use of modern technologies such as React.js, Tailwind CSS, Appwrite BaaS, and more.

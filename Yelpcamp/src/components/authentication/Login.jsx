@@ -39,14 +39,21 @@ function Login() {
   return (
     <div className="lg:flex lg:min-h-screen h-screen">
       <div className="min-w-[60%] lg:h-screen h-[70%] flex flex-col justify-center items-center px-8 py-10 lg:px-28 lg:py-10 relative">
-        <div className="flex justify-between w-full absolute top-8 left-0 px-8 lg:px-28">
-          <img src={Logo} alt="Logo" />
+        <div className="hidden md:flex justify-between w-full relative md:absolute top-4 md:left-0 px-8 lg:px-28">
+          <div>
+            <img src={Logo} alt="Logo" />
+          </div>
           <Link to="/home" className="text-cream-dark hover:text-rose-600">
             &#8592; &nbsp; Back to campgrounds
           </Link>
         </div>
         <div className="h-full flex my-10 lg:my-0 flex-col w-full md:w-[70%] lg:w-full justify-center">
-          <h1 className="font-bold text-3xl md:text-4xl my-6 w-64 md:w-full">
+
+          <Link to="/home" className="md:hidden text-cream-dark hover:text-rose-600">
+            &#8592; &nbsp; Back to campgrounds
+          </Link>
+          
+          <h1 className="font-bold text-2xl md:text-4xl my-6 w-64 md:w-full">
             Start Exploring camps from all <br className="hidden md:block" />
             around the world.
           </h1>

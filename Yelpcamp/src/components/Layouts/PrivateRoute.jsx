@@ -12,8 +12,8 @@ function PrivateRoute() {
   return user ? (
     <>
         <div className="flex justify-between w-full my-10 top-8 left-0 px-8 lg:px-28">
-          <Link to='/home'>
-            <img src={Logo} alt="Logo" />
+          <Link to='/home' className="hidden md:block">
+            <img src={Logo} alt="Logo" className="" />
           </Link>
           
           <Link to="/home" className="text-cream-dark hover:text-rose-600">
