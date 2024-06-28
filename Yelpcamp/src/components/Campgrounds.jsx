@@ -1,10 +1,16 @@
 import React from 'react'
 import Searchbox from './Searchbox'
 import HeroCampDisplay from './HeroCampDisplay'
+import { Helmet } from 'react-helmet'
 
 function Campgrounds() {
   return (
     <div>
+
+        <Helmet>
+          <title>Campgrounds - Yelpcamp</title>
+        </Helmet>
+
         <div className='bg-cream px-5 md:px-10 lg:px-20 rounded-md py-3 lg:mx-10 my-5'>
            <Searchbox placeholder="Search the Campgrounds"/> 
         </div>

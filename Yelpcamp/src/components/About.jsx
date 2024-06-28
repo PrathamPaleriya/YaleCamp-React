@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { BarLoader } from 'react-spinners';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -50,6 +51,11 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12">
+
+      <Helmet>
+        <title>About - Yelpcamp</title>
+      </Helmet>
+
       <div className="max-w-4xl w-full bg-white shadow-md rounded-lg p-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-32 h-32 bg-gray-300 rounded-full mb-4 md:mb-0 md:mr-8 flex-shrink-0">

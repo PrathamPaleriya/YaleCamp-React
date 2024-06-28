@@ -5,6 +5,7 @@ import { storage, databases } from "../appwrite/config";
 import { ID, Permission, Role } from "appwrite";
 import { BarLoader } from "react-spinners";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function AddCampground() {
   const { user } = useContext(CampgroundContext);
@@ -133,6 +134,11 @@ function AddCampground() {
 
   return (
     <>
+
+    <Helmet>
+      <title>Add Campground</title>
+    </Helmet>
+
     <div className="flex justify-center my-5 px-5 md:px-10 py-5">
       
       <div className="w-full md:w-[65%]">

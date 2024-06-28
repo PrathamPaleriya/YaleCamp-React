@@ -5,6 +5,7 @@ import { storage } from "../appwrite/config";
 import useFetchCamp from "../Hooks/useFetchCamp";
 import { BeatLoader } from "react-spinners";
 import ReviewCard from "./ReviewCard";
+import { Helmet } from "react-helmet";
 
 function camp() {
   const { id } = useParams();
@@ -42,8 +43,13 @@ function camp() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 px-8 lg:px-20 my-10 gap-10">
+
+      <Helmet>
+        <title>{`${data.Title} - Yelpcamp`}</title>
+      </Helmet>
+
       <div className="border-2 border-cream-outline rounded-md w-full p-10 lg:h-[650px] hover:border-cream-dark hover:border-2 order-2 h-96">
-        <Map location={data.location} id={camp.$id} title={camp.title} />
+        <Map location={data.location} id={data.$id} title={data.Title} />
       </div>
 
       <div className="w-full lg:col-span-2 lg:order-2">

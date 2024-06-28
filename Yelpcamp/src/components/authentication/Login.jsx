@@ -3,6 +3,7 @@ import Logo from "../../assets/Logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import authServices from "../../appwrite/authServices";
 import { BarLoader } from "react-spinners"; // Import the spinner component
+import { Helmet } from "react-helmet";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -38,6 +39,11 @@ function Login() {
 
   return (
     <div className="lg:flex lg:min-h-screen ">
+
+      <Helmet>
+        <title>Login - Yelpcamp</title>
+      </Helmet>
+
       <div className="min-w-[60%] lg:h-screen h-full flex flex-col justify-center items-center px-8 py-10 lg:px-28 lg:py-10 relative">
         <div className="hidden md:flex justify-between w-full relative md:absolute top-4 md:left-0 px-8 lg:px-28">
           <div>
