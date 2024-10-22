@@ -50,9 +50,10 @@ function Test() {
 
   return (
     <>
-
-    <h1>test</h1>
-    {/* <button onClick={handler}>test here</button> */}
+    <div className="h-screen w-full flex-col justify-center items-center">
+      <iframe src='https://interfaces.zapier.com/embed/chatbot/clzqto2jb000pf2s0c92didd9' height='900px' width='400px' allow='clipboard-write *'></iframe>
+    </div>
+    
 
     </>
 
